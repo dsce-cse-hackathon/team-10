@@ -30,50 +30,61 @@
         android:id="@+id/patient_age"
         android:hint="Enter your age" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/patients_family_ref"
+        android:hint="Enter parents reference id"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
     <Button
-        android:text="Save datails"
+        android:text="Save details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/b2"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/patients_family_ref"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="115dp" />
-
-    <Button
-        android:text="Family reference"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/b2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
-        android:id="@+id/b3" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/patient_age"
-        android:layout_alignParentStart="true"
-        android:id="@+id/patients_gender"
-        android:hint="Male/Female" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_below="@+id/patients_gender"
-        android:layout_alignEnd="@+id/patients_gender"
-        android:layout_marginTop="21dp"
-        android:id="@+id/patients_family_ref"
-        android:hint="Enter parents reference id" />
+        android:layout_marginTop="13dp" />
 
     <Button
         android:text="Go to Case"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/b2"
-        android:layout_alignStart="@+id/b2"
-        android:id="@+id/b4" />
+        android:id="@+id/b4"
+        android:layout_below="@+id/b2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Family reference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b3"
+        android:layout_below="@+id/b4"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/patient_age"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rgroup">
+
+        <RadioButton
+            android:text="MALE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb1"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="FEMALE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb2"
+            android:layout_weight="1" />
+    </RadioGroup>
 </RelativeLayout>
